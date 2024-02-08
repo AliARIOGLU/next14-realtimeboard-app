@@ -18,7 +18,7 @@ interface BoardListProps {
 }
 
 export const BoardList = ({ orgId, query }: BoardListProps) => {
-  const boards = useQuery(api.boards.get, { orgId });
+  const boards = useQuery(api.boards.get, { orgId, ...query });
 
   // in convex when data is undefined means pending state
   if (boards === undefined) {
