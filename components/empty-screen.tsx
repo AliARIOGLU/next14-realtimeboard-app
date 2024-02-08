@@ -8,7 +8,7 @@ interface EmptyScreenProps {
   image: string;
   label: string;
   title: string;
-  variant?: "org" | "boards";
+  variant?: string;
 }
 
 export const EmptyScreen = ({
@@ -19,15 +19,10 @@ export const EmptyScreen = ({
 }: EmptyScreenProps) => {
   return (
     <div className="h-full flex flex-col items-center justify-center">
-      <Image
-        src={image}
-        alt="empty"
-        height={variant === "boards" ? 110 : 160}
-        width={variant === "boards" ? 110 : 160}
-      />
+      <Image src={image} alt="empty" height={150} width={150} />
       {<h2 className="text-2xl font-semibold mt-6">{title}</h2>}
       <p className="text-muted-foreground text-sm mt-2">{label}</p>
-      {variant == "org" && (
+      {variant && (
         <div className="mt-6">
           <Dialog>
             <DialogTrigger asChild>
@@ -37,11 +32,6 @@ export const EmptyScreen = ({
               <CreateOrganization />
             </DialogContent>
           </Dialog>
-        </div>
-      )}
-      {variant === "boards" && (
-        <div className="mt-6">
-          <Button size="lg">Create board</Button>
         </div>
       )}
     </div>

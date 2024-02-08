@@ -1,5 +1,6 @@
 "use client";
 
+import { EmptyBoards } from "./empty-boards";
 import { EmptyScreen } from "@/components/empty-screen";
 
 interface BoardListProps {
@@ -34,13 +35,6 @@ export const BoardList = ({ orgId, query }: BoardListProps) => {
   }
 
   if (data?.length === 0) {
-    return (
-      <EmptyScreen
-        image="/note.svg"
-        title="Create your first board!"
-        label="Start by creating a board for your organization"
-        variant="boards"
-      />
-    );
+    return <EmptyBoards />;
   }
 };
