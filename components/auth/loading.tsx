@@ -5,6 +5,7 @@ export const Loading = () => {
     <div className="w-full h-full flex flex-col gap-y-4 justify-center items-center">
       <Image
         src="./logo.svg"
+        priority
         alt="logo"
         width={120}
         height={120}
