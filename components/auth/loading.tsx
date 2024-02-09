@@ -4,7 +4,7 @@ export const Loading = () => {
   return (
     <div className="w-full h-full flex flex-col gap-y-4 justify-center items-center">
       <Image
-        src="./logo.svg"
+        src="/logo.svg"
         priority
         alt="logo"
         width={120}
