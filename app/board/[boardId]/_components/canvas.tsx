@@ -398,9 +398,9 @@ export const Canvas = ({ boardId }: CanvasProps) => {
     function onKeyDown(e: KeyboardEvent) {
       switch (e.key) {
         // TODO : Handle delete layer with backspace keyboard
-        case "Backspace":
-          deleteLayers();
-          break;
+        // case "Backspace":
+        //   deleteLayers();
+        //   break;
         case "z": {
           if (e.ctrlKey || e.metaKey) {
             if (e.shiftKey) {
