@@ -2,17 +2,17 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { Menu } from "lucide-react";
 import { useQuery } from "convex/react";
 import { Poppins } from "next/font/google";
 
+import { cn } from "@/lib/utils";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { Hint } from "@/components/hint";
-import { useRenameModal } from "@/store/use-rename-modal";
 import { Actions } from "@/components/actions";
-import { Menu } from "lucide-react";
+import { useRenameModal } from "@/store/use-rename-modal";
 
 interface InfoProps {
   boardId: string;

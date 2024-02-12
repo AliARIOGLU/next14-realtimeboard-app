@@ -1,9 +1,9 @@
 "use client";
 
 import { memo } from "react";
+import { useSelf, useStorage } from "@/liveblocks.config";
 
 import { LayerType, Side, XYWH } from "@/types/canvas";
-import { useSelf, useStorage } from "@/liveblocks.config";
 import { useSelectionBounds } from "@/hooks/use-selection-bounds";
 
 interface SelectionBoxProps {

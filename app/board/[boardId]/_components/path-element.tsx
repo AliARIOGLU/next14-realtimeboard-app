@@ -1,5 +1,6 @@
-import { getSvgPathFromStroke } from "@/lib/utils";
 import getStroke from "perfect-freehand";
+
+import { getSvgPathFromStroke } from "@/lib/utils";
 
 interface PathElementProps {
   x: number;

@@ -2,11 +2,10 @@
 
 import { memo } from "react";
 import { shallow } from "@liveblocks/client";
-
 import { useOthersConnectionIds, useOthersMapped } from "@/liveblocks.config";
-import { colorToCss } from "@/lib/utils";
 
 import { Cursor } from "./cursor";
+import { colorToCss } from "@/lib/utils";
 import { PathElement } from "./path-element";
 
 const Cursors = () => {
