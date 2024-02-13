@@ -55,7 +55,7 @@ export const NoteElement = ({
         outline: selectionColor ? `1px solid ${selectionColor}` : "none",
         backgroundColor: fill ? colorToCss(fill) : "#000",
       }}
-      className="shadow-md drop-shadow-xl"
+      className="shadow-md drop-shadow-xl rounded-md"
     >
       <ContentEditable
         html={value ? value : value === "" ? "" : "Text"}
